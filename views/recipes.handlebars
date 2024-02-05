@@ -1,0 +1,16 @@
+{{!-- recipes page --}}
+<div>
+    <h1>Recipes</h1>
+</div>
+{{#each recipes}}
+<div>
+    <div>
+        <h3><a href="/recipes/{{id}}">{{name}}</a></h3>
+        <p>{{category.name}}</p>
+        <p>Created by {{user.name}}</p>
+    </div>
+    <div>
+        <p>{{time}}</p>
+    </div>
+</div>
+{{/each}}
