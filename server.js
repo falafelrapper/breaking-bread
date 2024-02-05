@@ -1,5 +1,5 @@
 // importing required modules
-const path = require('path'); // file and directory path 
+const path = require('path'); // file and directory 
 const express = require('express'); // express frame work
 const session = require('express-session'); // manages user's sessions
 const exphbs = require('express-handlebars'); // handlebars templating engine
@@ -48,6 +48,8 @@ app.use(routes);
 
 // Synchronize Sequelize models with the database
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening'));
+    
+    // Start the Express server and listen on the specified port
+    app.listen(PORT, () => console.log('Now listening'));
 
 });
