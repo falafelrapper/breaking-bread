@@ -1,1 +1,19 @@
 {{!-- recipes page --}}
+<div>
+    <h1>{{name}}</h1>
+</div>
+<div>
+    <div>
+        <h2>Created by {{user.name}}</h2>
+        <p>Category: {{category.name}}</p>
+    </div>
+    {{#if image_url}}
+    <img src={{image_url}}>
+    {{/if}}
+    <div>
+        <p>{{description}}</p>
+        <p>Ingredients:</p>
+        <p>{{ingredients}}</p>
+        <p>Prep Time: {{time}}</p>
+    </div>
+</div>
