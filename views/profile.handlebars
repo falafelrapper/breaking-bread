@@ -1,1 +1,60 @@
 {{!-- profile page --}}
+
+<div >
+    <h2>{{name}}'s Kitchen</h2>
+</div>
+
+
+<section>
+    <h2>Share a New Recipe</h2>
+    <form class="card">
+        <label for="recipeName">Recipe Name:</label>
+        <input type="text" id="recipeName" name="recipeName" required>
+
+        <label for="prepTime">Prep Time:</label>
+        <input type="text" id="prepTime" name="prepTime" required>
+
+        <label for="recipeCategory">Category:</label>
+        <select id="recipeCategory" name="recipeCategory" required>
+            <option value="appetizer">Appetizer</option>
+            <option value="mainCourse">Main Course</option>
+            <option value="dessert">Dessert</option>
+            {{!-- Add More Categories --}}
+        </select>
+
+        <label for="recipeDescription">Description:</label>
+        <textarea id="recipeDescription" name="recipeDescription" required></textarea>
+
+        <label for="recipeIngredients">Ingredients:</label>
+        <textarea id="recipeIngredients" name="recipeIngredients" required></textarea>
+
+        <label for="instructions">Instructions:</label>
+        <textarea id="instructions" name="instructions" required></textarea>
+
+
+        <button type="submit" id="shareRecipeBtn" class="btn btn-primary">Share Recipe</button>
+    </form>
+
+    <h2>My Recipes</h2>
+    {{#each recipes}}
+        <div>
+            <div>
+                <h2>
+                    <a href="/recipes/{{id}}">{{name}}</a>
+                </h2>
+                <p>
+                    {{name}} - {{category.name}}
+                </p>
+                <p>Created by {{user.name}}</p>
+            </div>
+            <div>
+                <p>
+                    {{description}}
+                </p>
+                <p>
+                    {{time}}
+                </p>
+            </div>
+        </div>
+    {{/each}}
+</section>
