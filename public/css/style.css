@@ -1,1 +1,48 @@
 /* Main Style Sheet */
+
+/* universal styling */
+* {
+    width: auto;
+    height: fit-content;
+    font-family: sans-serif;
+}
+
+/* root styling */
+
+:root{
+    --kyogre: #194E8A;
+    --miku: #4ECDC4;
+    --latte: #D6C898;
+    --latias: #FF6B6B;
+    --black: #000000;
+}
+
+h1{
+    font-weight: bold;
+}
+
+nav{
+    display: flex;
+    background-color: var(--black);
+    color: var(--miku);
+    height: 50px;
+}
+
+.nav-btn{
+    color: var(--miku);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-btn:hover{
+    color: var(--latias);
+    background-color: var(--miku);
+}
+
+body{
+    background-color: var(--latte);
+}
+
+p{
+    padding: 10px;
+}
