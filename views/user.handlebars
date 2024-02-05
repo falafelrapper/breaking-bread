@@ -1,1 +1,21 @@
-{{!-- user page --}}
+{{#each recipes}}
+<div>
+    <div>
+        <h2>
+            <a href="/recipes/{{id}}">{{name}}</a>
+        </h2>
+        <p>
+            {{name}} - {{category.name}}
+        </p>
+        <p>Created by {{user.name}}</p>
+    </div>
+    <div>
+        <p>
+            {{description}}
+        </p>
+        <p>
+            {{time}}
+        </p>
+    </div>
+</div>
+{{/each}}
