@@ -22,6 +22,7 @@ router.get('/', async (req, res) => {
 
         res.render('homepage', {
             // recipes
+            logged_in: req.session.logged_in 
         });
     } catch (err) {
         res.status(500).json(err);
@@ -45,9 +46,9 @@ router.get('/recipes', async (req, res) => {
 
         const recipes = recipeData.map((recipe) => recipe.get({ plain: true }));
 
-        // Pass serialized data and session flag into template
-        res.render('recipe', {
-            recipes
+        res.render('recipes', {
+            recipes,
+            logged_in: req.session.logged_in 
         });
     } catch (err) {
         res.status(500).json(err);
@@ -73,6 +74,7 @@ router.get('/recipes/:id', async (req, res) => {
 
         res.render('recipe', {
             ...recipe,
+            logged_in: req.session.logged_in 
         });
     } catch (err) {
         res.status(500).json(err);
@@ -94,6 +96,7 @@ router.get('/users/:id', async (req, res) => {
 
         res.render('user', {
             ...user,
+            logged_in: req.session.logged_in 
         });
     } catch (err) {
         res.status(500).json(err);
