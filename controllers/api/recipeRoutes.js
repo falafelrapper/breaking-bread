@@ -4,15 +4,15 @@ const withAuth = require('../../utils/auth');
 
 router.post('/', withAuth, async (req, res) => {
     try {
-      const newRecipe = await Recipe.create({
-        ...req.body,
-        user_id: req.session.user_id,
-      });
-  
-      res.status(200).json(new);
+        const newRecipe = await Recipe.create({
+            ...req.body,
+            user_id: req.session.user_id,
+        });
+
+        res.status(200).json(newRecipe);
     } catch (err) {
-      res.status(400).json(err);
+        res.status(400).json(err);
     }
-  });
+});
 
 module.exports = router;
