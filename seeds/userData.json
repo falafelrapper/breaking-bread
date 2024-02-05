@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Zachary",
+    "email": "zr@hmmz.com",
+    "password": "password12345"
+  },
+  {
+    "name": "Hasani",
+    "email": "he@hmmz.com",
+    "password": "password12345"
+  },
+  {
+    "name": "Margaux",
+    "email": "mjs@hmmz.com",
+    "password": "password12345"
+  },
+  {
+    "name": "Mike",
+    "email": "mb@hmmz.con",
+    "password": "password12345"
+  }
+]

@@ -48,8 +48,4 @@ app.use(routes);
 
 // Synchronize Sequelize models with the database
 sequelize.sync({ force: false }).then(() => {
-    
-    // Start the Express server and listen on the specified port
-    app.listen(PORT, () => console.log('Now listening'));
-
-});
+  app.listen(PORT, () => console.log('Now listening'));

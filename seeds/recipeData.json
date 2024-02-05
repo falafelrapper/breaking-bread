@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Popcorn",
+    "description": "Tasty and easy",
+    "ingredients": "Popcorn kernels",
+    "time": "5 minutes",
+    "user_id": 1,
+    "category_id": 2
+  }
+]
