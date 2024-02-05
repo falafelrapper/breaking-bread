@@ -22,6 +22,6 @@ Category.init({
       underscored: true,
       modelName: 'category',
     }
-})
+)
 
 module.exports = Category;
