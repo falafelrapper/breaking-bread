@@ -17,10 +17,11 @@ router.get('/', async (req, res) => {
             ],
         });
 
-        const recipes = recipeData.map((recipe) => recipe.get({ plain: true }));
+
+        // const recipes = recipeData.map((recipe) => recipe.get({ plain: true }));
 
         res.render('homepage', {
-            recipes
+            // recipes
         });
     } catch (err) {
         res.status(500).json(err);
