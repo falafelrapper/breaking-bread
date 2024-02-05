@@ -4,23 +4,23 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
     try {
-        const projectData = await Recipe.findAll({
-            include: [
-                {
-                    model: User,
-                    attributes: ['name'],
-                },
-                {
-                    model: Category,
-                    attributes: ['name'],
-                },
-            ],
-        });
+        // const projectData = await Recipe.findAll({
+        //     include: [
+        //         {
+        //             model: User,
+        //             attributes: ['name'],
+        //         },
+        //         {
+        //             model: Category,
+        //             attributes: ['name'],
+        //         },
+        //     ],
+        // });
 
-        const recipes = recipeData.map((recipe) => recipe.get({ plain: true }));
+        // const recipes = recipeData.map((recipe) => recipe.get({ plain: true }));
 
         res.render('homepage', {
-            recipes
+            // recipes
         });
     } catch (err) {
         res.status(500).json(err);
