@@ -4,7 +4,15 @@
     "description": "Tasty and easy",
     "ingredients": "Popcorn kernels",
     "time": "5 minutes",
-    "user_id": 1,
+    "user_id": 2,
     "category_id": 2
+  },
+  {
+    "name": "Kidney Bean Salad",
+    "description": "A delicious blend of ",
+    "ingredients": "Mustard, mayo, kidney beans, lescor peas",
+    "time": "15 minutes",
+    "user_id": 3,
+    "category_id": 3
   }
 ]
