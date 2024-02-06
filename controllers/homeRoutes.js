@@ -35,7 +35,7 @@ router.get('/recipes', async (req, res) => {
             include: [
                 {
                     model: User,
-                    attributes: ['name'],
+                    attributes: ['name', 'id'],
                 },
                 {
                     model: Category,
@@ -61,7 +61,7 @@ router.get('/recipes/:id', async (req, res) => {
             include: [
                 {
                     model: User,
-                    attributes: ['name'],
+                    attributes: ['name', 'id'],
                 },
                 {
                     model: Category,
