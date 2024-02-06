@@ -22,13 +22,18 @@ h1 {
     font-weight: bold;
 }
 
-.nav-list {
+nav {
     display: flex;
     background-color: var(--black);
     color: var(--miku);
     height: 50px;
     padding: 0;
     border-radius: 0 0 20px 20px;
+    justify-content: space-between;
+}
+
+.nav-list{
+    display: flex;
 }
 
 .nav-list a {
@@ -41,17 +46,20 @@ h1 {
     border-radius: 8px;
 }
 
-.login-box{
-    background-color: var(--smoke);
-    border: 2px solid black;
-    border-radius: 10px;
-    padding: 10px;
+#home-btn{
+    border-radius: 0 8px 8px 20px;;
+}
+
+.login a,
+.logout a{
+    border-radius: 8px 0 20px 8px;;
 }
 
 .nav-list a:hover {
     color: var(--latias);
     background-color: var(--miku);
 }
+
 .main-container {
     width: 80%;
     margin: 0 auto;
@@ -65,6 +73,14 @@ body {
 }
 
 p {
+    padding: 10px;
+}
+
+
+.login-box{
+    background-color: var(--smoke);
+    border: 2px solid black;
+    border-radius: 10px;
     padding: 10px;
 }
 
@@ -114,7 +130,6 @@ form .form-group {
 form .login-form, 
 form .signup-form{
     text-align: center;
-
 }
 
 form .form-input,
