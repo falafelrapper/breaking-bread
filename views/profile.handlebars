@@ -4,10 +4,9 @@
     <h2>{{name}}'s Kitchen</h2>
 </div>
 
-
 <section>
     <h2>Share a New Recipe</h2>
-    <form class="card">
+    <form class="recipe-Creator">
         <label for="recipeName">Recipe Name:</label>
         <input type="text" id="recipeName" name="recipeName" required>
 
@@ -16,6 +15,9 @@
 
         <label for="recipeCategory">Category:</label>
         <select id="recipeCategory" name="recipeCategory" required>
+            <option value="appetizer">Appetizer</option>
+            <option value="mainCourse">Main Course</option>
+            <option value="dessert">Dessert</option>
             <option value="appetizer">Appetizer</option>
             <option value="mainCourse">Main Course</option>
             <option value="dessert">Dessert</option>
@@ -58,3 +60,5 @@
         </div>
     {{/each}}
 </section>
+
+<script src="./public/js/profile.js"></script>
