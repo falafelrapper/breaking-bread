@@ -16,22 +16,13 @@
     --espresso: #685927;
     --latias: #FF6B6B;
     --black: #000000;
-    --smoke: #b6b6b6;
-}
-
-h1 {
-    font-weight: bold;
-    text-align: center;
+    --smoke: #807f7f80;
 }
 
 body {
     background: linear-gradient(var(--latte) 0, var(--latte) 25%, var(--latias));
     background-size: 100vw 100vh;
     margin: 0;
-}
-
-p {
-    padding: 10px;
 }
 
 /* All nav bar styles */
@@ -196,11 +187,36 @@ label form [type='radio'] {
 }
 
 /* homepage styles */
+.welcome-window {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    text-align: center;
+}
+
+
+
 .welcome-card {
-    background-color: var(--smoke);
+    display: block;
+    background: var(--smoke);
     border: 2px solid black;
     border-radius: 10px;
     padding: 10px;
+    text-align: center;
+}
+
+
+
+.breaking-bread{
+    display: block;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
 }
 
 /* recipe styles */
