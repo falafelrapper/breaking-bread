@@ -41,19 +41,22 @@ h1 {
     border-radius: 8px;
 }
 
-#logout {
-    color: var(--miku);
-    font-size: 20px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
-    padding: 13px;
-    border-radius: 8px;
+.login-box{
+    background-color: var(--smoke);
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 .nav-list a:hover {
     color: var(--latias);
     background-color: var(--miku);
+}
+.main-container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
 }
 
 body {
@@ -65,8 +68,10 @@ p {
     padding: 10px;
 }
 
-.main-container {
-    width: 80%;
+.login-window,
+.signup-window{
+    text-align: center;
+    /* margin: 0 auto; */
 }
 
 .row {
@@ -75,6 +80,9 @@ p {
     flex-direction: row;
     margin-left: auto;
     margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
 }
 
 .btn {
@@ -96,19 +104,21 @@ p {
     background-color: var(--miku);
 }
 
-form {
-    width: 100%;
-}
 
 form .form-group {
     display: block;
-    width: 100%;
-    margin: 0.625rem 0;
+    margin: 0.625rem auto;
+    padding: 0;
+}
+
+form .login-form{
+    text-align: center;
+
 }
 
 form .form-input,
 form .form-textarea {
-    display: block;
+    text-align: center;
 }
 
 form label,
@@ -116,10 +126,10 @@ form .form-label {
     display: inline-block;
     font-size: 1.2rem;
     margin: 0.625rem 0 0.25rem 0.3rem;
+    width: 100%;
 }
 
 form .form-input {
-    width: 100%;
     padding: 0.75rem;
     color: #1a1a1a;
     background-color: #ffffff;
@@ -143,7 +153,7 @@ label form [type='radio'] {
     display: inline-block;
 }
 
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
     .col-md-auto {
         flex-grow: 1;
         flex-basis: 0;
@@ -260,7 +270,7 @@ label form [type='radio'] {
     .align-content-center-md {
         align-content: center;
     }
-}
+} */
 
 .hidden {
     display: none;
