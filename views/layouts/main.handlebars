@@ -11,24 +11,26 @@
 
 <body>
     <header>
-            <nav>
-                <nav class="nav-list">
+        <nav>
+            <nav class="nav-list">
                 <a href="/" id="home-btn">Home</a>
-                <a href="/recipes">Recipes</a>
                 {{#if logged_in}}
-                <a href="/profile">Profile</a>
-                {{/if}}
-                </nav>
-                {{#if logged_in}}
-                <nav class="nav-list logout">
-                    <a href="/" id="logout">Logout</a>
-                </nav>
+                <a href="/recipes" id="recipe-in">Recipes</a>
+                <a href="/profile" id="profile-in">Profile</a>
                 {{else}}
-                <nav class="nav-list login">
-                    <a href="/login">Login</a>
-                </nav>
+                <a href="/recipes" id="recipe-out">Recipes</a>
                 {{/if}}
             </nav>
+            {{#if logged_in}}
+            <nav class="nav-list logout">
+                <a id="logout">Logout</a>
+            </nav>
+            {{else}}
+            <nav class="nav-list login">
+                <a href="/login">Login</a>
+            </nav>
+            {{/if}}
+        </nav>
     </header>
 
     <main class="main-container">
