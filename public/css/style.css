@@ -95,7 +95,7 @@ p {
     border-radius: 0.3rem;
     border: 1px solid transparent;
     outline: none;
-    color: var(--smoke);
+    color: white;
     background-color: var(--kyogre);
     transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
@@ -111,7 +111,8 @@ form .form-group {
     padding: 0;
 }
 
-form .login-form{
+form .login-form, 
+form .signup-form{
     text-align: center;
 
 }
