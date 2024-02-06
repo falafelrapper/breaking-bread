@@ -21,6 +21,7 @@
 
 h1 {
     font-weight: bold;
+    text-align: center;
 }
 
 body {
@@ -44,7 +45,7 @@ nav {
     justify-content: space-between;
 }
 
-.nav-list{
+.nav-list {
     display: flex;
 }
 
@@ -58,19 +59,38 @@ nav {
     border-radius: 8px;
 }
 
-#home-btn{
-    border-radius: 0 8px 8px 20px;;
+.nav-list a:hover {
+    color: var(--kyogre);
+    background-color: var(--miku);
+}
+
+#home-btn {
+    border-radius: 0 0 0 20px;
+    ;
+}
+
+#recipe-in {
+    border-radius: 0;
+}
+
+#recipe-out {
+    border-radius: 0 8px 8px 0;
+}
+
+#profile-in {
+    border-radius: 0 8px 8px 0;
 }
 
 .login a,
-.logout a{
-    border-radius: 8px 0 20px 8px;;
+.logout a {
+    border-radius: 8px 0 20px 8px;
+    ;
 }
 
-.nav-list a:hover {
-    color: var(--latias);
-    background-color: var(--miku);
+#logout {
+    cursor: pointer;
 }
+
 
 /* main container where our body goes */
 .main-container {
@@ -82,7 +102,7 @@ nav {
 
 /* login/signup styles */
 
-.login-box{
+.login-box {
     background-color: var(--smoke);
     border: 2px solid black;
     border-radius: 10px;
@@ -90,7 +110,7 @@ nav {
 }
 
 .login-window,
-.signup-window{
+.signup-window {
     text-align: center;
     /* margin: 0 auto; */
 }
@@ -113,8 +133,8 @@ form .form-group {
     padding: 0;
 }
 
-form .login-form, 
-form .signup-form{
+form .login-form,
+form .signup-form {
     text-align: center;
 }
 
@@ -173,6 +193,14 @@ label form [type='radio'] {
 
 .btn:hover {
     background-color: var(--miku);
+}
+
+/* homepage styles */
+.welcome-card {
+    background-color: var(--smoke);
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 /* recipe styles */
