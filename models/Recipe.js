@@ -23,6 +23,10 @@ Recipe.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
+        instructions: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
         time: {
             type: DataTypes.STRING,
         },
