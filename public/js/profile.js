@@ -61,6 +61,6 @@ document.getElementById("upload_widget").addEventListener("click", function () {
     myWidget.open();
 }, false);
 
-document.querySelector('.card').addEventListener('submit', newFormHandler);
+document.querySelector('.recipe-Creator').addEventListener('submit', newFormHandler);
 
 document.querySelector('.project-list').addEventListener('click', delButtonHandler);
