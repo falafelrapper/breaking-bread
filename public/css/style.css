@@ -265,3 +265,12 @@ label form [type='radio'] {
 .hidden {
     display: none;
 }
+
+.recipe-card {
+    width: 25%;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: black;
+    margin: 10px;
+    padding-left: 5px;
+}
