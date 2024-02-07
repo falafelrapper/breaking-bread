@@ -64,9 +64,9 @@ document.getElementById("upload_widget").addEventListener("click", function () {
     myWidget.open();
 }, false);
 
-document.querySelector('.recipe-Creator').addEventListener('submit', newFormHandler);
+document.querySelector('#shareRecipeBtn').addEventListener('click', newFormHandler);
 
-const delBtn = document.querySelectorAll('.project-list');
+const delBtn = document.querySelectorAll('#delete-recipe');
 for (let i = 0; i <delBtn.length; i++) {
     delBtn[i].addEventListener('click', delButtonHandler);
 };

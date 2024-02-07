@@ -2,16 +2,14 @@
 <div class="profile-window">
 
     <div>
-
         <h2 class="userHeader">{{name}}'s Kitchen</h2>
-
     </div>
 
     <section>
 
         <h2 id="recipe-start">Share a New Recipe</h2>
 
-        <form class="recipe-Creator">
+        <div class="recipe-Creator">
 
             <div class="create1">
                 <label for="recipeName">Recipe Name:</label>
@@ -53,27 +51,26 @@
             <div class="create4">
                 <button type="submit" id="shareRecipeBtn" class="btn btn-primary">Share Recipe</button>
             </div>
-        </form>
-        <div class="recipe-window">
-            <h2>My Recipes</h2>
-            {{#each recipes}}
-            <div class="recipe-card">
-                <div>
-                    <h2>
-                        <a href="/recipes/{{id}}">{{name}}</a>
-                    </h2>
-                </div>
-                <div>
-                    <p>
-                        {{description}}
-                    </p>
-                </div>
-                <button class="btn" data-id="{{id}}">Delete Recipe</button>
-            </div>
-            {{/each}}
         </div>
+        <h2>My Recipes</h2>
+        {{#each recipes}}
+        <div class="recipe-card">
+            <div>
+                <h2>
+                    <a href="/recipes/{{id}}">{{name}}</a>
+                </h2>
+            </div>
+            <div>
+                <p>
+                    {{description}}
+                </p>
+            </div>
+            <button class="btn" id="delete-recipe" data-id="{{id}}">Delete Recipe</button>
+        </div>
+        {{/each}}
     </section>
 </div>
+
 
 <script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>
 
