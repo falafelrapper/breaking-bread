@@ -12,23 +12,32 @@
 :root {
     --kyogre: #194E8A;
     --miku: #4ECDC4;
-    --latte: #D6C898;
+    --latte: #d6c898;
+    --espresso: #685927;
     --latias: #FF6B6B;
     --black: #000000;
-    --smoke: #b6b6b6;
+    --smoke: #807f7f80;
 }
 
-h1 {
-    font-weight: bold;
+body {
+    background: linear-gradient(var(--latte) 0, var(--latte) 25%, var(--latias));
+    background-size: 100vw 100vh;
+    margin: 0;
 }
 
-.nav-list {
+/* All nav bar styles */
+nav {
     display: flex;
     background-color: var(--black);
     color: var(--miku);
     height: 50px;
     padding: 0;
-    border-radius: 0 0 20px 20px;
+    border-radius: 0 0 30px 30px;
+    justify-content: space-between;
+}
+
+.nav-list {
+    display: flex;
 }
 
 .nav-list a {
@@ -41,32 +50,60 @@ h1 {
     border-radius: 8px;
 }
 
-#logout {
-    color: var(--miku);
-    font-size: 20px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
-    padding: 13px;
-    border-radius: 8px;
-}
-
 .nav-list a:hover {
-    color: var(--latias);
+    color: var(--kyogre);
     background-color: var(--miku);
 }
 
-body {
-    background-color: var(--latte);
-    margin: 0;
+#home-btn {
+    border-radius: 0 0 0 30px;
+    ;
 }
 
-p {
+#recipe-in {
+    border-radius: 0;
+}
+
+#recipe-out {
+    border-radius: 0 8px 8px 0;
+}
+
+#profile-in {
+    border-radius: 0 8px 8px 0;
+}
+
+.login a,
+.logout a {
+    border-radius: 8px 0 30px 8px;
+    ;
+}
+
+#logout {
+    cursor: pointer;
+}
+
+
+/* main container where our body goes */
+.main-container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+/* login/signup styles */
+
+.login-box {
+    background-color: var(--smoke);
+    border: 2px solid black;
+    border-radius: 10px;
     padding: 10px;
 }
 
-.main-container {
-    width: 80%;
+.login-window,
+.signup-window {
+    text-align: center;
+    /* margin: 0 auto; */
 }
 
 .row {
@@ -75,40 +112,26 @@ p {
     flex-direction: row;
     margin-left: auto;
     margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
 }
 
-.btn {
-    text-align: center;
-    display: inline-block;
-    padding: 0.5rem 1.2rem;
-    margin: 0;
-    text-decoration: none;
-    font-size: 1rem;
-    border-radius: 0.3rem;
-    border: 1px solid transparent;
-    outline: none;
-    color: var(--smoke);
-    background-color: var(--kyogre);
-    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
-}
-
-.btn:hover {
-    background-color: var(--miku);
-}
-
-form {
-    width: 100%;
-}
 
 form .form-group {
     display: block;
-    width: 100%;
-    margin: 0.625rem 0;
+    margin: 0.625rem auto;
+    padding: 0;
+}
+
+form .login-form,
+form .signup-form {
+    text-align: center;
 }
 
 form .form-input,
 form .form-textarea {
-    display: block;
+    text-align: center;
 }
 
 form label,
@@ -116,10 +139,10 @@ form .form-label {
     display: inline-block;
     font-size: 1.2rem;
     margin: 0.625rem 0 0.25rem 0.3rem;
+    width: 100%;
 }
 
 form .form-input {
-    width: 100%;
     padding: 0.75rem;
     color: #1a1a1a;
     background-color: #ffffff;
@@ -143,124 +166,114 @@ label form [type='radio'] {
     display: inline-block;
 }
 
-@media screen and (min-width: 768px) {
-    .col-md-auto {
-        flex-grow: 1;
-        flex-basis: 0;
-    }
-
-    .col-md-1 {
-        flex: 0 0 8.33333%;
-        max-width: 8.33333%;
-    }
-
-    .col-md-2 {
-        flex: 0 0 16.66667%;
-        max-width: 16.66667%;
-    }
-
-    .col-md-3 {
-        flex: 0 0 25%;
-        max-width: 25%;
-    }
-
-    .col-md-4 {
-        flex: 0 0 33.33333%;
-        max-width: 33.33333%;
-    }
-
-    .col-md-5 {
-        flex: 0 0 41.66667%;
-        max-width: 41.66667%;
-    }
-
-    .col-md-6 {
-        flex: 0 0 50%;
-        max-width: 50%;
-    }
-
-    .col-md-7 {
-        flex: 0 0 58.33333%;
-        max-width: 58.33333%;
-    }
-
-    .col-md-8 {
-        flex: 0 0 66.66667%;
-        max-width: 66.66667%;
-    }
-
-    .col-md-9 {
-        flex: 0 0 75%;
-        max-width: 75%;
-    }
-
-    .col-md-10 {
-        flex: 0 0 83.33333%;
-        max-width: 83.33333%;
-    }
-
-    .col-md-11 {
-        flex: 0 0 91.66667%;
-        max-width: 91.66667%;
-    }
-
-    .col-md-12 {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-
-    .justify-space-between-md {
-        justify-content: space-between;
-    }
-
-    .justify-space-around-md {
-        justify-content: space-around;
-    }
-
-    .justify-flex-start-md {
-        justify-content: flex-start;
-    }
-
-    .justify-flex-end-md {
-        justify-content: flex-end;
-    }
-
-    .justify-center-md {
-        justify-content: center;
-    }
-
-    .align-start-md {
-        align-items: flex-start;
-    }
-
-    .align-stretch-md {
-        align-items: stretch;
-    }
-
-    .align-end-md {
-        align-items: flex-end;
-    }
-
-    .align-center-md {
-        align-items: center;
-    }
-
-    .align-content-start-md {
-        align-content: flex-start;
-    }
-
-    .align-content-stretch-md {
-        align-content: stretch;
-    }
-
-    .align-content-end-md {
-        align-content: flex-end;
-    }
-
-    .align-content-center-md {
-        align-content: center;
-    }
+/* universal button style */
+.btn {
+    text-align: center;
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    margin: 0;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 0.3rem;
+    border: 1px solid transparent;
+    outline: none;
+    color: white;
+    background-color: var(--kyogre);
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
+
+.btn:hover {
+    background-color: var(--miku);
+}
+
+/* homepage styles */
+.welcome-window {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    text-align: center;
+}
+
+
+
+.welcome-card {
+    display: block;
+    background: var(--smoke);
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+.breaking-bread {
+    display: block;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+/* recipe styles */
+
+.recipe-window {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+
+.recipe-Creator {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.create1,
+.create2,
+.create3{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: auto;
+}
+
+.recipe-card {
+    font-size: 20px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: black;
+    background: var(--smoke);
+    margin: 10px;
+}
+
+#recipeDescription{
+    min-width: 4rem;
+}
+
+.recipe-card a {
+    text-decoration: none;
+}
+
+/* Profile Styles */
+
+.profile-window {
+    display: block;
+    text-align: center;
+}
+
+.userHeader,
+#recipe-start {
+    text-align: center;
+}
+
+/* User Styles */
 
 .hidden {
     display: none;

@@ -2,11 +2,11 @@
 var img_url = '';
 
 var myWidget = cloudinary.createUploadWidget({
-    cloudName: 'my_cloud_name',
-    uploadPreset: 'my_preset'
+    cloudName: 'dmm9eqw1o',
+    uploadPreset: 'opqxqpcl'
 }, (error, result) => {
     if (!error && result && result.event === "success") {
-        img_url = result.info.url;
+        image_url = result.info.url;
         console.log('Done! Here is the image info: ', result.info);
     }
 }
@@ -28,7 +28,7 @@ const newFormHandler = async (event) => {
     if (name && time && category && description && ingredients && instructions) {
         const response = await fetch(`/api/recipes`, {
             method: 'POST',
-            body: JSON.stringify({ name, time, category, description, img_url, ingredients, instructions }),
+            body: JSON.stringify({ name, time, category, description, image_url, ingredients, instructions }),
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -64,6 +64,9 @@ document.getElementById("upload_widget").addEventListener("click", function () {
     myWidget.open();
 }, false);
 
-document.querySelector('.card').addEventListener('submit', newFormHandler);
+document.querySelector('.recipe-Creator').addEventListener('submit', newFormHandler);
 
-document.querySelector('.project-list').addEventListener('click', delButtonHandler);
+const delBtn = document.querySelectorAll('.project-list');
+for (let i = 0; i <delBtn.length; i++) {
+    delBtn[i].addEventListener('click', delButtonHandler);
+};
