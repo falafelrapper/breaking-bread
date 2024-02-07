@@ -1,5 +1,5 @@
 // profile script
-var img_url = '';
+var image_url = '';
 
 var myWidget = cloudinary.createUploadWidget({
     cloudName: 'dmm9eqw1o',
