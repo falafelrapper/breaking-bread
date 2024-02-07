@@ -1,23 +1,26 @@
-<div class="recipe-window">
-    <h2 class="userHeader">{{name}}'s Kitchen</h2>
-    {{#each recipes}}
-    <div class="recipe-card">
-        <div>
-            <h2>
-                <a href="/recipes/{{id}}">{{name}}</a>
-            </h2>
-            <p>
-                {{name}} - {{category.name}}
-            </p>
-            <p>Created by <a href="/users/{{user.id}}">{{user.name}}</a></p>
-        </div>
-        <div>
-            <p>
-                {{description}}
-            </p>
-            <p>
-                {{time}}
-            </p>
+<div class="profile-window">
+    <div>
+
+        <h2 class="userHeader">{{name}}'s Kitchen</h2>
+
+    </div>
+    <div>
+        <div class="recipe-window">
+                {{#each recipes}}
+            <div class="recipe-card">
+                <div>
+                    <h2>
+                        <a href="/recipes/{{id}}">{{name}}</a>
+                    </h2>
+                </div>
+                <div>
+                    <p>
+                        {{description}}
+                    </p>
+                </div>
+            </div>
+            {{/each}}
+
         </div>
     </div>
     {{/each}}
