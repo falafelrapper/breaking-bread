@@ -14,5 +14,37 @@
     "time": "15 minutes",
     "user_id": 3,
     "category_id": 3
+  },
+  {
+    "name": "Soon Tofu",
+    "description": "A warm rich and tangy soup",
+    "ingredients": "Sesame Oil, Onion, Green Onion, Garlic, Gochugaru, Shoyu, Oyster sauce, Sugar, Anchovy and Kelp stock, Zucchini, Mushroom, Silken tofu",
+    "time": "15 minutes",
+    "user_id": 3,
+    "category_id": 3
+  },
+  {
+    "name": "Jujeh Kabab",
+    "description": "Tangy and fulfilling",
+    "ingredients": "Chicken, Extra Virgin Olive Oil, Greek Yogurt, Onion puree, Turmeric, Saffron, Lemon, Salt, Pepper",
+    "time": "20 minutes",
+    "user_id": 3,
+    "category_id": 4
+  },
+  {
+    "name": "Pancakes",
+    "description": "Warm adn fluffy",
+    "ingredients": "Flour, Baking powder, Sugar, Salt, Milk, Butter, Egg",
+    "time": "10 minutes",
+    "user_id": 3,
+    "category_id": 1
+  },
+  {
+    "name": "Chocolate Mousse",
+    "description": "Rich and chocolatey",
+    "ingredients": "Dark Chocolate, milk, egg, salt, sugar, cocoa powder",
+    "time": "15 minutes",
+    "user_id": 3,
+    "category_id": 7
   }
 ]
