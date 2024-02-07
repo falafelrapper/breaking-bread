@@ -17,11 +17,13 @@
     --latias: #FF6B6B;
     --black: #000000;
     --smoke: #807f7f80;
+    --lugia: #dddddd;
 }
 
 body {
     background: linear-gradient(var(--latte) 0, var(--latte) 25%, var(--latias));
     background-size: 100vw 100vh;
+    background-attachment: fixed;
     margin: 0;
 }
 
@@ -134,9 +136,12 @@ form .signup-form {
 }
 
 form input,
-form select,
-form textarea{
+form select {
     text-align: center;
+    margin: 0.625rem 0 0.25rem 0.3rem;
+}
+
+form textarea {
     margin: 0.625rem 0 0.25rem 0.3rem;
 }
 
@@ -235,14 +240,21 @@ label form [type='radio'] {
 }
 
 .recipe-Creator {
+    background: var(--lugia);
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
+    font-size: 20px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: black;
+    margin: 10px;
+    padding-bottom: 10px;
 }
 
 .create1,
-.create2{
+.create2 {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -250,13 +262,13 @@ label form [type='radio'] {
 }
 
 .create3,
-.create4{
+.create4 {
     display: block;
     width: 100%;
 }
 
 #upload_widget,
-#shareRecipeBtn{
+#shareRecipeBtn {
     display: block;
     margin: 1rem auto;
 }
@@ -273,8 +285,9 @@ label form [type='radio'] {
 
 #recipeDescription,
 #recipeIngredients,
-#instructions{
+#instructions {
     min-width: 12rem;
+    min-height: 6rem;
 }
 
 .recipe-card a {
