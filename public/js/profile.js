@@ -1,5 +1,5 @@
 // profile script
-var img_url = '';
+var image_url = '';
 
 var myWidget = cloudinary.createUploadWidget({
     cloudName: 'dmm9eqw1o',
@@ -17,11 +17,14 @@ const newFormHandler = async (event) => {
 
     const name = document.querySelector('#recipeName').value.trim();
     const time = document.querySelector('#prepTime').value.trim();
-    const category = document.querySelector('#recipeCategory').value.trim();
+    let category_id = document.querySelector('#recipeCategory').value;
     const description = document.querySelector('#recipeDescription').value.trim();
     const ingredients = document.querySelector('#recipeIngredients').value.trim();
     const instructions = document.querySelector('#instructions').value.trim();
 
+    category_id = parseInt(category_id);
+    console.log(category_id);
+    
     if (name && time && category && description && ingredients && instructions) {
         const response = await fetch(`/api/recipes`, {
             method: 'POST',
