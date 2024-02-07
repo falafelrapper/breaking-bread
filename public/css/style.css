@@ -28,9 +28,10 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-img{
+img {
     max-width: 500px;
     max-height: 500px;
+    border-radius: 10px;
 }
 
 /* All nav bar styles */
@@ -45,7 +46,7 @@ nav {
     font-family: 'Chivo', sans-serif;
 }
 
-header{
+header {
     position: fixed;
     top: 0;
     width: 100%;
@@ -100,8 +101,6 @@ header{
 
 /* main container where our body goes */
 .main-container {
-    width: 80%;
-    padding-top: 50px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -120,7 +119,6 @@ header{
 .login-window,
 .signup-window {
     text-align: center;
-    /* margin: 0 auto; */
 }
 
 .row {
@@ -150,17 +148,24 @@ form .signup-form {
 }
 
 form input,
-form select {
+form select,
+div input,
+div select {
     text-align: center;
     margin: 0.625rem 0 0.25rem 0.3rem;
+    min-width: 1%;
+    max-width: 10%;
+    width: 10%;
 }
 
-form textarea {
+form textarea,
+div textarea {
     margin: 0.625rem 0 0.25rem 0.3rem;
 }
 
 form label,
-form .form-label {
+form .form-label,
+div label {
     display: inline-block;
     font-size: 1.2rem;
     margin: 0.625rem 0 0.25rem 0.3rem;
@@ -174,21 +179,14 @@ form .form-input {
     font-size: 1.2rem;
     border: 1px solid #484848;
     border-radius: 0.3rem;
+    min-width: none;
+    max-width: 100%;
+    width: 92%;
 }
 
 
 form .form-input.form-input-squared {
     border-radius: 0;
-}
-
-form [type='checkbox'],
-form [type='radio'] {
-    display: inline-block;
-}
-
-label form [type='checkbox'],
-label form [type='radio'] {
-    display: inline-block;
 }
 
 /* universal button style */
@@ -207,6 +205,7 @@ label form [type='radio'] {
     color: var(--lugia);
     background-color: var(--kyogre);
     transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    cursor: pointer;
 }
 
 .btn:hover {
@@ -216,11 +215,11 @@ label form [type='radio'] {
 
 /* homepage styles */
 
-.welcome-background{
+.welcome-background {
     background-image: url('https://images.pexels.com/photos/1640773/pexels-photo-1640773.jpeg');
     background-size: cover;
     width: 100%;
-    height: 94.75vh;
+    height: 100vh;
 }
 
 .welcome-window {
@@ -257,12 +256,19 @@ label form [type='radio'] {
     text-align: center;
     font-family: 'Lexend';
     background-color: var(--deepsmoke);
+    text-shadow:
+     -1px -1px 0 var(--lugia),  
+      1px -1px 0 var(--lugia),
+      -1px 1px 0 var(--lugia),
+       1px 1px 0 var(--lugia);
 }
 
 /* recipe styles */
 
-.recipe-window {
-    width: 100%;
+.recipe-window,
+.profile-window {
+    width: 80%;
+    margin-top: 50px;
     flex-direction: row;
     justify-content: center;
     text-align: center;
@@ -278,8 +284,13 @@ label form [type='radio'] {
     border-radius: 10px;
     border-style: solid;
     border-color: black;
-    margin: 10px;
+    margin: 10px auto;
     padding-bottom: 10px;
+    width: 75%;
+}
+
+.recipe-Creator div {
+    justify-content: center;
 }
 
 .create1,
@@ -288,6 +299,8 @@ label form [type='radio'] {
     flex-direction: row;
     align-items: center;
     margin: auto;
+    justify-content: center;
+    width: 100%;
 }
 
 .create3,
@@ -312,10 +325,13 @@ label form [type='radio'] {
     padding-bottom: 10px;
 }
 
+
 #recipeDescription,
 #recipeIngredients,
 #instructions {
-    min-width: 12rem;
+    min-width: 1%;
+    max-width: 15%;
+    width: 15%;
     min-height: 6rem;
 }
 
@@ -326,8 +342,9 @@ label form [type='radio'] {
 /* Profile Styles */
 
 .profile-window {
-    display: block;
+    /* display: block; */
     text-align: center;
+    justify-content: center;
 }
 
 .userHeader,
