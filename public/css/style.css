@@ -34,6 +34,10 @@ img {
     border-radius: 10px;
 }
 
+.bold-font {
+    font-weight: bold;
+}
+
 /* All nav bar styles */
 nav {
     display: flex;
@@ -257,10 +261,10 @@ form .form-input.form-input-squared {
     font-family: 'Lexend';
     background-color: var(--deepsmoke);
     text-shadow:
-     -1px -1px 0 var(--lugia),  
-      1px -1px 0 var(--lugia),
-      -1px 1px 0 var(--lugia),
-       1px 1px 0 var(--lugia);
+        -1px -1px 0 var(--lugia),
+        1px -1px 0 var(--lugia),
+        -1px 1px 0 var(--lugia),
+        1px 1px 0 var(--lugia);
 }
 
 /* recipe styles */
@@ -315,6 +319,17 @@ form .form-input.form-input-squared {
     margin: 1rem auto;
 }
 
+.recipe-descrip {
+    font-size: 20px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: black;
+    background: linear-gradient(var(--lugia) 0, var(--deepsmoke));
+    margin: 10px auto;
+    padding-bottom: 10px;
+    width: 40%;
+}
+
 .recipe-card {
     font-size: 20px;
     border-radius: 10px;
@@ -324,7 +339,6 @@ form .form-input.form-input-squared {
     margin: 10px;
     padding-bottom: 10px;
 }
-
 
 #recipeDescription,
 #recipeIngredients,
