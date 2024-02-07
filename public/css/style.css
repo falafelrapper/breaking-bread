@@ -98,6 +98,7 @@ nav {
     border: 2px solid black;
     border-radius: 10px;
     padding: 10px;
+    display: block;
 }
 
 .login-window,
@@ -119,19 +120,24 @@ nav {
 
 
 form .form-group {
-    display: block;
+    display: flex;
+    flex-direction: column;
     margin: 0.625rem auto;
     padding: 0;
 }
 
 form .login-form,
 form .signup-form {
+    display: flex;
+    flex-direction: column;
     text-align: center;
 }
 
-form .form-input,
-form .form-textarea {
+form input,
+form select,
+form textarea{
     text-align: center;
+    margin: 0.625rem 0 0.25rem 0.3rem;
 }
 
 form label,
@@ -139,7 +145,6 @@ form .form-label {
     display: inline-block;
     font-size: 1.2rem;
     margin: 0.625rem 0 0.25rem 0.3rem;
-    width: 100%;
 }
 
 form .form-input {
@@ -151,6 +156,7 @@ form .form-input {
     border: 1px solid #484848;
     border-radius: 0.3rem;
 }
+
 
 form .form-input.form-input-squared {
     border-radius: 0;
@@ -236,12 +242,23 @@ label form [type='radio'] {
 }
 
 .create1,
-.create2,
-.create3{
+.create2{
     display: flex;
     flex-direction: row;
     align-items: center;
     margin: auto;
+}
+
+.create3,
+.create4{
+    display: block;
+    width: 100%;
+}
+
+#upload_widget,
+#shareRecipeBtn{
+    display: block;
+    margin: 1rem auto;
 }
 
 .recipe-card {
@@ -251,10 +268,13 @@ label form [type='radio'] {
     border-color: black;
     background: var(--smoke);
     margin: 10px;
+    padding-bottom: 10px;
 }
 
-#recipeDescription{
-    min-width: 4rem;
+#recipeDescription,
+#recipeIngredients,
+#instructions{
+    min-width: 12rem;
 }
 
 .recipe-card a {
