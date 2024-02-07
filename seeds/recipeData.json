@@ -14,5 +14,25 @@
     "time": "15 minutes",
     "user_id": 3,
     "category_id": 3
+  },
+  {
+    "name": "Amuro's Glass of Milk",
+    "description": "A delicious glass of milk like the one Amuro Ray drank one time.",
+    "ingredients": "Milk",
+    "instructions": "Pour milk into glass",
+    "image_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.Q2eSEhKgnHyZy5b7oRIMfwHaE7%26pid%3DApi&f=1&ipt=01adaa3b4848643915f34b6359750d9b3e783f58a6179c4d8b1e75a51bcc340f&ipo=images",
+    "time": "0 minutes",
+    "user_id": 4,
+    "category_id": 1
+  },
+  {
+    "name": "Bright Noa's Burger",
+    "description": "A vending machine burger eaten by Captain Bright Noa.",
+    "ingredients": "Vending machine hamburger",
+    "instructions": "Unwrap the burger and eat!",
+    "image_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.explicit.bing.net%2Fth%3Fid%3DOIP.1LT8JSrl_pUHZnphySs8MQHaFi%26pid%3DApi&f=1&ipt=a4da5e41a80ed99297c298c0bf6f00f40f178e424172f757cb186f980c9444ad&ipo=images",
+    "time": "0 minutes",
+    "user_id": 4,
+    "category_id": 3
   }
 ]
