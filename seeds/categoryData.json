@@ -1,27 +1,27 @@
 [
   {
-    "name": "breakfast"
+    "name": "Breakfast"
   },
   {
-    "name": "brunch"
+    "name": "Brunch"
   },
   {
-    "name": "lunch"
+    "name": "Lunch"
   },
   {
-    "name": "dinner"
+    "name": "Dinner"
   },
   {
-    "name": "appetizer"
+    "name": "Appetizer"
   },
   {
-    "name": "sideDish"
+    "name": "Side Dish"
   },
   {
-    "name": "dessert"
+    "name": "Dessert"
   },
   {
-    "name": "snack"
+    "name": "Snack"
   }
 ]
 
