@@ -38,4 +38,4 @@ Breaking Bread is a recipe sharing forum designed to futher the idea of communit
 - Everyone - seeds (Mike handled the formatting), frontend route that links to their handlebar, bounce around as needed
 
 ## Deployed Link:
-To view the deployed application and share your own recipes, you may click [here!](https://github.com/falafelrapper/breaking-bread)
+To view the deployed application and share your own recipes, you may click [here!](https://agile-cove-66310-81bc545fcfa7.herokuapp.com/)
