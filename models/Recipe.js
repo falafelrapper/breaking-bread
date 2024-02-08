@@ -3,6 +3,12 @@ const sequelize = require('../config/connection');
 
 class Recipe extends Model {}
 
+
+// Recipe model references category and user as foreign keys
+// Instructions was added later and Not Null wasn't used for compatability with older seeds
+// Making a new recipe JS does prevent entering without instructions
+// image_url doen't have to be filled in if user doesn't want to upload an image
+
 Recipe.init(
     {
         id: {
