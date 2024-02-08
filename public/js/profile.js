@@ -1,6 +1,7 @@
-// profile script
+// Profile script
 var image_url;
 
+// Functionality for Cloudinary
 var myWidget = cloudinary.createUploadWidget({
     cloudName: 'dmm9eqw1o',
     uploadPreset: 'opqxqpcl'
@@ -12,6 +13,7 @@ var myWidget = cloudinary.createUploadWidget({
 }
 )
 
+// Recipe Creator function
 const newFormHandler = async (event) => {
     event.preventDefault();
 
@@ -42,6 +44,7 @@ const newFormHandler = async (event) => {
     }
 };
 
+// Delete recipe function
 const delButtonHandler = async (event) => {
     if (event.target.hasAttribute('data-id')) {
         const id = event.target.getAttribute('data-id');
@@ -59,6 +62,7 @@ const delButtonHandler = async (event) => {
 };
 
 
+// Event listeners
 
 document.getElementById("upload_widget").addEventListener("click", function () {
     myWidget.open();

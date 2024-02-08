@@ -238,8 +238,6 @@ form .form-input.form-input-squared {
     text-align: center;
 }
 
-
-
 .welcome-card {
     display: block;
     background: var(--smoke);
@@ -250,8 +248,6 @@ form .form-input.form-input-squared {
     text-align: center;
     font-size: 20px;
 }
-
-
 
 .breaking-bread {
     display: block;
@@ -364,10 +360,4 @@ form .form-input.form-input-squared {
 .userHeader,
 #recipe-start {
     text-align: center;
-}
-
-/* User Styles */
-
-.hidden {
-    display: none;
 }
