@@ -1,9 +1,8 @@
-// profile script
 
-// variable to store the image URL after successful upload
+// Profile script
 var image_url;
 
-// Cloudinary widget for image uploads
+// Functionality for Cloudinary
 var myWidget = cloudinary.createUploadWidget({
     cloudName: 'dmm9eqw1o',
     uploadPreset: 'opqxqpcl'
@@ -15,7 +14,7 @@ var myWidget = cloudinary.createUploadWidget({
 }
 )
 
-// event handler for form submission
+// Recipe Creator function
 const newFormHandler = async (event) => {
     event.preventDefault();
 
@@ -50,7 +49,8 @@ const newFormHandler = async (event) => {
     }
 };
 
-// event handler for delete button clicks
+// Delete recipe function
+
 const delButtonHandler = async (event) => {
     if (event.target.hasAttribute('data-id')) {
         const id = event.target.getAttribute('data-id');
@@ -68,6 +68,7 @@ const delButtonHandler = async (event) => {
         }
     }
 };
+
 
 
 // event listener for opening the Cloudinary widget on button click
