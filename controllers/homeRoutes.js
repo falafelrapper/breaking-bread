@@ -2,20 +2,23 @@ const router = require('express').Router();
 const { Category, User, Recipe } = require('../models');
 const withAuth = require('../utils/auth');
 
+// route for the hompage which will display the homepage handlebars
+// Originally we were going to display some recipes on the hompage but ended up not using them
+
 router.get('/', async (req, res) => {
     try {
-        const recipeData = await Recipe.findAll({
-            include: [
-                {
-                    model: User,
-                    attributes: ['name'],
-                },
-                {
-                    model: Category,
-                    attributes: ['name'],
-                },
-            ],
-        });
+        // const recipeData = await Recipe.findAll({
+        //     include: [
+        //         {
+        //             model: User,
+        //             attributes: ['name'],
+        //         },
+        //         {
+        //             model: Category,
+        //             attributes: ['name'],
+        //         },
+        //     ],
+        // });
 
 
         // const recipes = recipeData.map((recipe) => recipe.get({ plain: true }));
@@ -29,6 +32,8 @@ router.get('/', async (req, res) => {
     }
 });
 
+// Route for the recipes page
+// Returns recipes with thier associated Users with names and ids, and category
 router.get('/recipes', async (req, res) => {
     try {
         const recipeData = await Recipe.findAll({
@@ -44,6 +49,7 @@ router.get('/recipes', async (req, res) => {
             ],
         });
 
+        // map is needed to 
         const recipes = recipeData.map((recipe) => recipe.get({ plain: true }));
 
         res.render('recipes', {
@@ -55,6 +61,7 @@ router.get('/recipes', async (req, res) => {
     }
 });
 
+// Route for a single recipe based on id, also includes the associated user with name and id to make a link, and category
 router.get('/recipes/:id', async (req, res) => {
     try {
         const recipeData = await Recipe.findByPk(req.params.id, {
@@ -81,6 +88,8 @@ router.get('/recipes/:id', async (req, res) => {
     }
 });
 
+// Route for a single user based on id
+// Only returns the associated recipes since the information displayed on the page is limited
 router.get('/users/:id', async (req, res) => {
     try {
         const userData = await User.findByPk(req.params.id, {
@@ -103,9 +112,12 @@ router.get('/users/:id', async (req, res) => {
     }
 });
 
+// Route for the profile of the currently logged in user
+// Requires the user to be logged in to view, withAuth will redirect the user to the login otherwise
+// Returns the associated recipes only since the information displayed on this page is limited
+// Uses session id to find the currently logged in user
 router.get('/profile', withAuth, async (req, res) => {
     try {
-        // Find the logged in user based on the session ID
         const userData = await User.findByPk(req.session.user_id, {
             attributes: { exclude: ['password'] },
             include: [{ model: Recipe }]
@@ -122,6 +134,7 @@ router.get('/profile', withAuth, async (req, res) => {
     }
 });
 
+// Route for the login, will redirect the user to thier profile is already logged in
 router.get('/login', (req, res) => {
     if (req.session.logged_in) {
         res.redirect('/profile');
@@ -131,6 +144,7 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
+// Route for the signup, will redirect the user to thier profile if already logged in
 router.get('/signup', (req, res) => {
     if (req.session.logged_in) {
         res.redirect('/profile');

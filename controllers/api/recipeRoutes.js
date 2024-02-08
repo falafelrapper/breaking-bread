@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Recipe } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+// Recipe route for creating a new recipe on the profile page
 router.post('/', withAuth, async (req, res) => {
     try {
         const newRecipe = await Recipe.create({
@@ -16,6 +17,8 @@ router.post('/', withAuth, async (req, res) => {
     }
 });
 
+// Recipe route for deleting a recipe from the profile page
+// The id is actually provided by the delete button on the profile page
 router.delete('/:id', withAuth, async (req, res) => {
     try {
         const recipeData = await Recipe.destroy({
